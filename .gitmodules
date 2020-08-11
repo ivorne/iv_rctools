@@ -1,0 +1,3 @@
+[submodule "libs/msdfgen"]
+	path = libs/msdfgen
+	url = https://github.com/ivorne/msdfgen.git
