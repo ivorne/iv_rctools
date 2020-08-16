@@ -74,13 +74,15 @@ endmacro()
 
 function( iv_rctools_target target_name destination_path input_target )
 	
+    find_package( PythonInterp 3 REQUIRED )
+    
 	set( RESDIRS )
 	iv_rctools_append_resdirs( RESDIRS ${input_target} )
-	message( STATUS "resdirs: ${RESDIRS}" )
+	message( STATUS "resource directories: ${RESDIRS}" )
 	
 	add_custom_target(
 		${target_name}
-		COMMAND python3 ${RCTOOLS_SOURCE_DIR}/run/run.py ${RCTOOLS_BUILD_DIR} ${destination_path} - ${RESDIRS}
+		COMMAND ${PYTHON_EXECUTABLE} ${RCTOOLS_SOURCE_DIR}/run/run.py ${RCTOOLS_BUILD_DIR} ${destination_path} - ${RESDIRS}
 	)
 	add_dependencies( ${target_name} fontgen )
 	add_dependencies( ${target_name} svggen )
