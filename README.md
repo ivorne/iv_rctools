@@ -4,7 +4,7 @@ Resource compilation tools for ivorium game developmenet framework.
 ## Requirements
   - python3
   - freetype library
-  - GIMP (`gimp-console`)
+  - GIMP *(optional)*
 
 ## Usage
 Include it in your CMakeLists.txt file and call function *iv_rctools_target* to create CMake target *resources*.
