@@ -2,7 +2,7 @@
 Resource compilation tools for ivorium game developmenet framework.
 
 ## Requirements
-  - python3
+  - python3 with package [Pillow](https://pypi.org/project/Pillow/)
   - freetype library
   - GIMP *(optional)*
 
